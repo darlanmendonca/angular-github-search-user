@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { SearchComponent } from './search/search.component';
 import { LogotypeComponent } from './logotype/logotype.component';
+import { SearchInputComponent } from './search-input/search-input.component';
 
 const routes: Routes = [
   {path: '', component: SearchComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
     AppComponent,
     SearchComponent,
     LogotypeComponent,
+    SearchInputComponent,
   ],
   imports: [
     BrowserModule,
