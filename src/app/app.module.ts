@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { SearchComponent } from './search/search.component';
+import { LogotypeComponent } from './logotype/logotype.component';
 
 const routes: Routes = [
   {path: '', component: SearchComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
+    LogotypeComponent,
   ],
   imports: [
     BrowserModule,
