@@ -11,19 +11,21 @@
 
 <main>
   <aside *ngIf="user">
-    <img [src]="user.avatar_url" />
-    <h2>{{user.name}}</h2>
-    <h3>{{user.login}}</h3>
+    <div class="sticky">
+      <img [src]="user.avatar_url" />
+      <h2>{{user.name}}</h2>
+      <h3>{{user.login}}</h3>
 
-    <ul>
-      <li title="organization" *ngFor="let organization of user.organizations">
-        {{organization.login}}
-      </li>
-      <li title="location" *ngIf="user.location">{{user.location}}</li>
-      <li title="stars">{{user.stars}}</li>
-      <li title="repositories">{{user.public_repos}}</li>
-      <li title="followers">{{user.followers}}</li>
-    </ul>
+      <ul>
+        <li title="organization" *ngFor="let organization of user.organizations">
+          {{organization.login}}
+        </li>
+        <li title="location" *ngIf="user.location">{{user.location}}</li>
+        <li title="stars">{{user.stars}}</li>
+        <li title="repositories">{{user.public_repos}}</li>
+        <li title="followers">{{user.followers}}</li>
+      </ul>
+    </div>
   </aside>
 
   <div class="container">

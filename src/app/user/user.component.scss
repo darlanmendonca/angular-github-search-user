@@ -75,6 +75,11 @@ aside {
 
   @media (min-width: $tablet) {max-width: 277.33px}
 
+  .sticky {
+    position: sticky;
+    top: 20px;
+  }
+
   img {
     width: 100%;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
