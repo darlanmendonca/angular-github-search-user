@@ -30,6 +30,44 @@ header {
 
 main {
   padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+
+    .container {
+      flex: 1;
+      margin-left: 70px;
+    }
+  }
+
+  .repositories {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 20px;
+
+    h3, p {margin: 0}
+    h3 {
+      color: $purple;
+      font-size: 35px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    p {font-size: 20px}
+
+    span {
+      display: inline-block;
+      padding-left: 32px;
+      background: no-repeat left center;
+      line-height: 30px;
+      margin-top: 9px;
+
+      &[title="stars"] {background-image: url('/assets/stars.icon.svg')}
+    }
+
+    li:not(:first-of-type) {margin-top: 30px}
+  }
 }
 
 aside {

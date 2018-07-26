@@ -26,7 +26,14 @@
     </ul>
   </aside>
 
-  <div class="repositories">
+  <div class="container">
+    <ul class="repositories">
+      <li *ngFor="let repository of user.repositories">
+        <h3>{{repository.name}}</h3>
+        <p>{{repository.description}}</p>
+        <span title="stars">{{repository.stargazers_count}}</span>
+      </li>
+    </ul>
   </div>
 </main>
 
