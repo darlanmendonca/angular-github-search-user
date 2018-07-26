@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,15 +8,17 @@ import { Router } from '@angular/router';
 })
 export class SearchInputComponent {
   @Input() value: string = '';
+  @Output() search = new EventEmitter;
 
   constructor(private router: Router) {}
 
-  search(event) {
+  dispatchSearch(event) {
     event.preventDefault();
     const query = event.target.query.value;
 
     if (query) {
       this.router.navigateByUrl(`/${query}`)
+      this.search.emit(query);
     }
   }
 

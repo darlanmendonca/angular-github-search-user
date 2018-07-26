@@ -1,8 +1,11 @@
-$tablet: 900px;
+@import '../../colors';
+
+$desktop: 900px;
+$tablet: 700px;
 
 header {
   padding: 20px;
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     display: flex;
     align-items: center;
 
@@ -18,6 +21,60 @@ header {
   }
 }
 
-.container {
-
+.user-not-found--error {
+  margin: 120px 0 0;
+  color: $purple;
+  font-size: 40px;
+  text-align: center;
 }
+
+main {
+  padding: 0 20px;
+}
+
+aside {
+  width: 100%;
+
+  @media (min-width: $tablet) {max-width: 277.33px}
+
+  img {
+    width: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+    margin-bottom: 12px;
+  }
+
+  h2, h3 {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 7px;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 28px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding-left: 32px;
+      background: no-repeat left center;
+      line-height: 30px;
+      margin-bottom: 10px;
+
+      &[title="organization"] {background-image: url('/assets/organization.icon.svg')}
+      &[title="location"] {background-image: url('/assets/location.icon.svg')}
+      &[title="stars"] {background-image: url('/assets/stars.icon.svg')}
+      &[title="repositories"] {background-image: url('/assets/repositories.icon.svg')}
+      &[title="followers"] {background-image: url('/assets/followers.icon.svg')}
+    }
+  }
+}
+
