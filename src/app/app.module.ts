@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { LogotypeComponent } from './logotype/logotype.component';
 import { SearchInputComponent } from './search-input/search-input.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {path: '', component: SearchComponent},
+  {path: ':username', component: UserComponent},
 ]
 
 @NgModule({
@@ -18,6 +20,7 @@ const routes: Routes = [
     SearchComponent,
     LogotypeComponent,
     SearchInputComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

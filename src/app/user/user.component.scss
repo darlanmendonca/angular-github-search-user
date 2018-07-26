@@ -1,0 +1,23 @@
+$tablet: 900px;
+
+header {
+  padding: 20px;
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+
+    .container {
+      flex: 1;
+      margin-left: 70px;
+    }
+  }
+
+  app-logotype {
+    font-size: .79em;
+    margin-bottom: 10px;
+  }
+}
+
+.container {
+
+}

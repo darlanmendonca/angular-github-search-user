@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-input',
@@ -6,14 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-input.component.scss'],
 })
 export class SearchInputComponent {
-  constructor() { }
+  @Input() value: string = '';
+
+  constructor(private router: Router) {}
 
   search(event) {
     event.preventDefault();
     const query = event.target.query.value;
 
     if (query) {
-
+      this.router.navigateByUrl(`/${query}`)
     }
   }
 

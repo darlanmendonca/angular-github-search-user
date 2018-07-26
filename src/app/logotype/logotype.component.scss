@@ -3,9 +3,10 @@
 h1 {
   font-family: monaco, serif;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 3.75em;
   margin: 0;
   line-height: 1.3em;
+  user-select: none;
 }
 
 small {
