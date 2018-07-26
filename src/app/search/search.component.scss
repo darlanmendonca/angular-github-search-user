@@ -1,0 +1,14 @@
+.centered {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 750px;
+  width: 100%;
+  text-align: center;
+}
