@@ -48,6 +48,7 @@ main {
     list-style: none;
     margin-bottom: 20px;
 
+    a {text-decoration: none}
     h3, p {margin: 0}
     h3 {
       color: $purple;
