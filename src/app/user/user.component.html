@@ -19,23 +19,31 @@
       <h3>{{user.login}}</h3>
 
       <ul>
-        <li title="organization" *ngFor="let organization of user.organizations">
-          {{organization.login}}
+        <li *ngFor="let organization of user.organizations" title="organization">
+          <app-icon-data type="organization">{{organization.login}}</app-icon-data>
         </li>
-        <li title="location" *ngIf="user.location">{{user.location}}</li>
-        <li title="stars">{{user.stars}}</li>
-        <li title="repositories">{{user.public_repos}}</li>
-        <li title="followers">{{user.followers}}</li>
+        <li title="location">
+          <app-icon-data type="location">{{user.location}}</app-icon-data>
+        </li>
+        <li title="stars">
+          <app-icon-data type="star">{{user.stars}}</app-icon-data>
+        </li>
+        <li title="repositories">
+          <app-icon-data type="repositories">{{user.public_repos}}</app-icon-data>
+        </li>
+        <li title="followers">
+          <app-icon-data type="followers">{{user.followers}}</app-icon-data>
+        </li>
       </ul>
     </div>
   </aside>
 
   <div class="container">
-    <ul class="repositories">
+    <ul class="repositories" *ngIf="user && user.repositories">
       <li *ngFor="let repository of user.repositories">
         <a [href]="repository.html_url" target="_blank"><h3>{{repository.name}}</h3></a>
         <p>{{repository.description}}</p>
-        <span title="stars">{{repository.stargazers_count}}</span>
+        <app-icon-data title="stars" type="star">{{repository.stargazers_count}}</app-icon-data>
       </li>
     </ul>
   </div>

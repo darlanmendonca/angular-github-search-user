@@ -59,14 +59,8 @@ main {
 
     p {font-size: 20px}
 
-    span {
-      display: inline-block;
-      padding-left: 32px;
-      background: no-repeat left center;
-      line-height: 30px;
+    app-icon-data {
       margin-top: 9px;
-
-      &[title="stars"] {background-image: url('/assets/stars.icon.svg')}
     }
 
     li:not(:first-of-type) {margin-top: 30px}
@@ -108,19 +102,6 @@ aside {
   ul {
     list-style: none;
     padding: 0;
-
-    li {
-      padding-left: 32px;
-      background: no-repeat left center;
-      line-height: 30px;
-      margin-bottom: 10px;
-
-      &[title="organization"] {background-image: url('/assets/organization.icon.svg')}
-      &[title="location"] {background-image: url('/assets/location.icon.svg')}
-      &[title="stars"] {background-image: url('/assets/stars.icon.svg')}
-      &[title="repositories"] {background-image: url('/assets/repositories.icon.svg')}
-      &[title="followers"] {background-image: url('/assets/followers.icon.svg')}
-    }
   }
 }
 

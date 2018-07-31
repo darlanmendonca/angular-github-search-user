@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { LogotypeComponent } from './logotype/logotype.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { UserComponent } from './user/user.component';
+import { IconDataComponent } from './icon-data/icon-data.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
     LogotypeComponent,
     SearchInputComponent,
     UserComponent,
+    IconDataComponent,
   ],
   imports: [
     BrowserModule,
